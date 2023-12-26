@@ -33,7 +33,7 @@ var close=setInterval(
 
 
         var r=Math.floor(c/d);
-              dets.target.style.color=black;
+              dets.target.style.color="black";
         document.querySelector("h2").textContent=`You click ${r} per second.`
         t=0;
     }
@@ -53,7 +53,7 @@ document.querySelector(".nav").addEventListener("click",function(dets){
 d=dets.target.textContent;
     
 if(t==0){
-      dets.target.style.color=blue;
+      dets.target.style.color="blue";
     c=0
 if(d=="3s"){
     music.play();
