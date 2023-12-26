@@ -1,7 +1,7 @@
 var t=0;
 var c=0;
 var d;
-var dets;
+var veto;
 let music= new Audio("bg.mp3");
 
 function timereduc(){
@@ -33,9 +33,10 @@ var close=setInterval(
 
 
         var r=Math.floor(c/d);
-              dets.target.style.color="black";
         document.querySelector("h2").textContent=`You click ${r} per second.`
         t=0;
+        veto.style.color="black"
+        
     }
 }
    ,1000)
@@ -51,10 +52,10 @@ document.querySelector(".ni").innerHTML=c}
 
 document.querySelector(".nav").addEventListener("click",function(dets){
 d=dets.target.textContent;
-    
+veto=dets.target;
 if(t==0){
-      dets.target.style.color="blue";
     c=0
+    veto.style.color="blue"
 if(d=="3s"){
     music.play();
     t=3;
@@ -75,6 +76,7 @@ if(d=="3s"){
 }
 }
 )
+
 
 
 
